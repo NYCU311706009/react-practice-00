@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+body {
+    background-color: blue;
+    color: white;
+
+    /*轉成flex container*/
+    display: flex;
+    /*定義容器子元素的主軸方向，
+        row:水平，child排列從右到左；
+        row-reverse、column、column-reverse*/
+    flex-direction: row;
+    /*在主軸上的對齊方式*/
+    justify-content: center;
+
+    font-family: sans-serif;
+}
+
+.wrapper {
+    background-color: darkblue;
+    width: 450px;
+    padding: 30px;
+    
+    /*四個角是圓角的*/
+    border-radius: 5px;
+
+    margin-top: 20px;
+    text-align: center;
+}
+.form {
+    height: 40px;
+    width: 100%;
+    margin: 25px 0px;
+    border:1px solid rgb(0, 17, 255);
+    display: flex;
+}
+.form > input {
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+}
+.form > button {
+    background-color: rgb(0, 17, 255);
+    color: white;
+    width: 50px;
+    height: 100%;
+    border: none;
+
+    /*游標放上去的時候會變手指*/
+    cursor: pointer;
+}
+.todoItem {
+    background-color: blue;
+    /* color: white; */
+    height: 40px;
+    padding: 0 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    /* flex-direction: row; */
+    /* space between會讓item以container的起點與終點之間，做等距間隔*/
+    justify-content: space-between;
+    align-items: center;
+}
+.completed {
+    opacity: 0.4;
+    text-decoration: line-through 3px black;
+}
